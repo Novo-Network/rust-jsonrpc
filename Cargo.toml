@@ -21,7 +21,11 @@ default = ["simple_http", "simple_tcp"]
 simple_http = ["base64"]
 # A transport that uses `minreq` as the HTTP client.
 minreq_http = ["base64", "minreq"]
-minreq_http_https_bundled_probe = ["base64", "minreq/https-bundled-probe"]
+minreq_http_https_bundled_probe = [
+  "base64",
+  "minreq_http",
+  "minreq/https-bundled-probe",
+]
 # Basic transport over a raw TcpListener
 simple_tcp = []
 # Basic transport over a raw UnixStream
